@@ -65,7 +65,9 @@ console.log(selectedFile)
         method:"post",
         url:'https://candleriggs.herokuapp.com/api/createBanners',
         data: formData,
-        headers:{ "Content-Type":"multipart/form-data"},
+        headers:{ "Content-Type":"multipart/form-data",
+      "mode" : "no-cors"
+      },
          
         })
         console.log(response);
