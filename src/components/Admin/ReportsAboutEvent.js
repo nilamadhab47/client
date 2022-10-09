@@ -19,7 +19,7 @@ export default function ReportsAboutEvent() {
   const [datas,setDatas] =useState([])
 
   const fetchData = async () => {
-    const response = await fetch("https://candleriggs.herokuapp.com/api/getAllEvents");
+    const response = await fetch("/api/getAllEvents");
     const data = await response.json();
     console.log(data.eventData);
     setDatas(data.eventData);
