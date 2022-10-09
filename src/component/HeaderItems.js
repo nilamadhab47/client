@@ -18,7 +18,7 @@ import { Link } from "react-router-dom";
 const HeaderItems = () => {
   const [item,setItem]= useState([])
   useEffect(() => {
-   fetch("/api/getAllEvents").then((result)=>{
+   fetch("https://candleriggs.herokuapp.com/api/getAllEvents").then((result)=>{
     result.json().then((resp)=>{
       setItem(resp.eventData)
       console.log(resp.eventData)

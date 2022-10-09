@@ -42,7 +42,7 @@ export default function PutBanner() {
     setSelectedFilePhone(e.target.files[0]);
   }
   const fetchData = async () => {
-    const response = await fetch(`/api/getBanners/${_id}`);
+    const response = await fetch(`https://candleriggs.herokuapp.com/api/getBanners/${_id}`);
     const data = await response.json();
     console.log(data)
     setData(data);
@@ -74,7 +74,7 @@ export default function PutBanner() {
     try{
       const response = await axios({
         method:"put",
-        url:`/api/updateBanners/${_id}`,
+        url:`https://candleriggs.herokuapp.com/api/updateBanners/${_id}`,
         data: formData,
         headers:{ "Content-Type":"multipart/form-data"},
          

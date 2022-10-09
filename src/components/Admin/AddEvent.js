@@ -130,7 +130,7 @@ export default function AddEvent() {
     try {
       const response = await axios({
         method: "post",
-        url: "/api/createEvents",
+        url: "https://candleriggs.herokuapp.com/api/createEvents",
         data: formData,
         headers: { "Content-Type": "multipart/form-data" },
       });

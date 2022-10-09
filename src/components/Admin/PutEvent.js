@@ -64,7 +64,7 @@ export default function PutEvent() {
   console.log(data)
   console.log(selectedFile);
   const fetchData = async () => {
-    const response = await fetch(`/api/getEvents/${_id}`);
+    const response = await fetch(`https://candleriggs.herokuapp.com/api/getEvents/${_id}`);
     const data = await response.json();
     console.log(data);
     setData(data);
@@ -104,7 +104,7 @@ export default function PutEvent() {
     try {
       const response = await axios({
         method: "put",
-        url: `/api/updateEvents/${_id}`,
+        url: `https://candleriggs.herokuapp.com/api/updateEvents/${_id}`,
         data: formData,
         headers: { "Content-Type": "multipart/form-data" },
       });
