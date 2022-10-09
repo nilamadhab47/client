@@ -19,7 +19,7 @@ export default function ReportsAboutEvent() {
   const [datas,setDatas] =useState([])
 
   const fetchData = async () => {
-    const response = await fetch("/api/getAllEvents");
+    const response = await fetch("https://calenderiggss.herokuapp.com/api/getAllEvents");
     const data = await response.json();
     console.log(data.eventData);
     setDatas(data.eventData);
@@ -32,7 +32,7 @@ export default function ReportsAboutEvent() {
   
  
   function deleteEvent(_id){
-    fetch(`https://candleriggs.herokuapp.com/api/deleteEvents/${_id}`,{
+    fetch(`https://calenderiggss.herokuapp.com/api/deleteEvents/${_id}`,{
       method:"DELETE",
     }).then((result)=>{
     result.json().then((resp)=>{
