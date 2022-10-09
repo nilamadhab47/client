@@ -21,7 +21,7 @@ export default function ReportBanner() {
   const [user, setUser] = useState([]);
   
   const fetchData = async () => {
-    const response = await fetch("https://calenderiggss.herokuapp.com/api/getAllBanners");
+    const response = await fetch("/api/getAllBanners");
     const data = await response.json();
     console.log(data.bannerData);
     setUser(data.bannerData);
